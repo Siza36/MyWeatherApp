@@ -1,63 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
 
-  *{
-      padding: 0;
-      margin: 0;
-      user-select: none;
-      box-sizing: border-box;
-  }
+body {
+  font-family: "Titillium Web", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  background-color: rgb(39, 39, 39);
+}
+header h1 {
+  font-size: 80px;
+}
+.container .inputdiv input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin: 20px 0px;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 10px;
+  display: inline-block;
+}
+.container .inputdiv input:focus{
+  border: none;
+  background-color: rgb(90, 90, 90);
+  color: rgb(255, 255, 255);
+}
+.container .inputdiv input[type=text] {
+  transition: width 0.4s ease-in-out;
+}
 
-
-  body{
-    font-family: 'Titillium Web', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-      color: white;
-      background-color:rgba(0, 0, 0, 1) ;
-  }
-  header h1{
-      font-size: 80px;
-  }
-  .container .inputdiv input{
-      width: 500px;
-      height: 40px;
-      border: none;
-      border-radius: 20px;
-      margin: 20px 0px;
-      font-weight: bold; 
-      font-size: 20px;
-      padding-left: 10px;
-  }
-  form .container .buttonanddiscription button{
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    margin: 0px 50px 0px 0px;
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-  }
-  form .container .buttonanddiscription button:hover{
-    background-color:rgb(204, 0, 255);
-    color: rgb(255, 255, 255);
-    transition-property: background-color , color;
-    transition-duration: 300ms;
-  }
-  form .container .buttonanddiscription span{
-    font-weight: bold;
-    text-decoration: underline;
-    letter-spacing: 3px;
-    color: rgb(204, 0, 255);
-  }
-  form .api .city{
-      width: 1200px;
-      height: 400px;
-      margin: 30px 0px;
-      background-color: rgba(18, 0, 68, 0.404);
-      border: 3px solid rgb(255, 255, 255);
-      border-radius: 40px;
-      display: none;
-  }
+.container .inputdiv input[type=text]:focus {
+  width: 150%;
+}
+input[name=username] {
+  pointer-events: none; 
+}
+form .container .buttonanddiscription button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 0px 50px 0px 0px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(156, 156, 156);
+}
+form .container .buttonanddiscription button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+  transition-property: background-color, color;
+  transition-duration: 300ms;
+}
+form .container .buttonanddiscription span {
+  font-weight: bold;
+  text-decoration: underline;
+  letter-spacing: 3px;
+  color: rgb(175, 175, 175);
+}
+li.city {
+  width: 1200px;
+  height: 400px;
+  margin: 30px 0px;
+  background-color: rgba(18, 0, 68, 0.404);
+  border: 3px solid rgb(116, 116, 116);
+  border-radius: 40px;
+  list-style: none;
+  position: relative;
+}
+.containerr{
+  position: relative;
+ padding: 20px 70px;
+}
+li.city div .cityy{
+  display: inline-block;
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+}
+li.city div .countryy{
+  display: inline-block;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+li.city div .temp{
+  font-size: 150px;
+  display: block;
+  height: 10px;
+  color: rgb(255, 255, 255);
+}
+li.city h4{
+  color: rgb(97, 97, 97);
+}
+li.city img{
+  width: 300px;
+ display: inline-block;
+ position:absolute;
+ top: 50px;
+ left:600px;
+filter: invert(100%) sepia(100%) saturate(110%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
